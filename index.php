@@ -38,7 +38,7 @@ function chk(){
 <font  face="verdana">Password  :</font> <input type="password" name="pass" /><br>
 <br><br/>
 <input type="submit" value="Login" class="button" onclick="return chk()"/>
-<a href="registration.php">Register</a> <br>
+<input type="button" class="button" name="gp_back" value="Register" onclick="window.location = 'registration.php'"/> <br>
 <?php
 
 if(isset($_SESSION["flag"]) && $_SESSION["flag"]=="fail"){
