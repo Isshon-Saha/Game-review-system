@@ -34,7 +34,7 @@ function aj()
 		{
 			document.getElementById("hint1").style.visibility="visible";
 			document.getElementById("hint1").innerHTML=xmlhttp.responseText;
-			
+
 		}
 	}
 	var url="register.php?uname="+v;
@@ -43,8 +43,11 @@ function aj()
 }
 </script>
 <html>
+<div class="flex-container">
 <head>
+	<link rel="stylesheet" href="styles.css">
 <meta charset="UTF-8">
+<div class="content-container">
 <title>Registration Page</title>
 
 <style>
@@ -70,7 +73,7 @@ function aj()
 
 <script>
 	function testChk (){
-		
+
 		var v=document.getElementById("namefield").value;
 		var l=document.getElementById("namefield").value.length;
 		var xmlhttp= new XMLHttpRequest()
@@ -89,20 +92,20 @@ function aj()
 				{
 					document.getElementById("hint1").style.visibility="hidden";
 				}
-				
+
 			}
 		}
 		var url="register.php?uname="+v;
 		xmlhttp.open("GET", url,true);
 		xmlhttp.send();
-			
+
 	}
 </script>
 </head>
 
-<body bgcolor="#E6E6FA" style="text-align:center">
+<body bgcolor="white" style="text-align:center">
   <br/><h1 style="text-align:center"><font  face="verdana" size="7">Register Here</font></h1><br/><br/><br/><br/><br/><br/>
-
+<div class="content">
   <form id="register_form" action="register.php" method="POST">
     <label face="verdana"> Username: </label>
     <input type="text" id="namefield" name="username" placeholder="enter username here" onkeyup="testChk()"/>
@@ -124,7 +127,9 @@ function aj()
     <input class="button" type="submit" name="submit" value="Register" onclick="return chk()">
     <input type="button" class="button" name="gp_back" value="Go Back" onclick="window.location = '.'"/> <br>
  </form>
-
+</div>
 </body>
+</div>
+</div>
 
 </html>

@@ -1,0 +1,40 @@
+.flex-container
+{
+  display:flex;
+  flex-flow: column;
+  min-height: 100vh;
+}
+.content-container{
+    display: flex;
+    flex: 1;
+}
+
+header, footer{
+
+}
+
+.content{
+    flex:1;
+}
+
+.sidebar1, .sidebar2{
+    
+    flex: 0 0 90px;
+}
+
+.sidebar1{
+    order: -1;
+}
+
+.tablinks {
+background-color:darkolivegreen;
+border:none;
+color: white;
+padding: 15px 32px;
+text-align: center;
+text-decoration:inherit;
+display: inline-block;
+font-size: 16px;
+margin: 3px 2px;
+cursor:cell;
+}
