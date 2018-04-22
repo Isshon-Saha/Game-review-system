@@ -2,8 +2,13 @@
 {
   display:flex;
   flex-flow: column wrap;
-  min-height: 100 vh
+  min-height: 100vh;
 
+}
+
+html, body {
+    margin: 0;
+    height: 100%;
 }
 .content-container{
     display: flex;
