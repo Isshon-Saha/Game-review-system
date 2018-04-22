@@ -1,0 +1,44 @@
+.flex-container
+{
+  display:flex;
+  flex-flow: column wrap;
+  min-height: 100 vh
+
+}
+.content-container{
+    display: flex;
+   flex-flow: row;
+    flex: 1;
+}
+.game_area
+{
+  display: flex;
+  flex-flow: row;
+  flex: 1;
+}
+
+
+.content{
+  display: flex;
+  flex-flow: column;
+    flex:1;
+
+}
+
+.image
+{
+  flex: 1
+}
+
+.desc{
+  flex: 3
+}
+
+.sidebar1, .sidebar2{
+
+    flex: 0 0 90px;
+}
+.sidebar2
+{
+  order: 1
+}
