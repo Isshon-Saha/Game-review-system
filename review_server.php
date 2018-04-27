@@ -10,7 +10,19 @@ $res=getDataFromDB($sql);
 foreach ($res as $key) {
   $descs=$key["desc_ids"];
 }
-print_r($descs);
+
+if($descs==null)
+{
+
+}
+else {
+  $arr=exlode(",",$descs);
+  $last=(int)$arr[sizeof($arr)-1];
+  $last++;
+  $new=(string)$last;
+  $sql="update game_bank set desc_ids='".$descs.",".$new."' where G_name='".$_GET["title"]."'";
+  res=updateDB($sql);
+}
 
 ob_flush();
 

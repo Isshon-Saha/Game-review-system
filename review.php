@@ -9,7 +9,7 @@
 
 </script>
 <body class="flex-container">
-  <form class="myform" action="review_server.php" method="post">
+  <form class="myform" action="review_server.php?title=thw witcher III:wild hunt" method="POST">
     <header><h1 style="text-align:center">
       <?php
           if(isset($_GET["title"]))
@@ -48,14 +48,14 @@
             <fieldset>
               <legend>Your review</legend>
               Rating :
-              <select>
+              <select name="selection">
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
                 <option value="4">4</option>
                 <option value="5">5</option>
               </select><br/>
-              <textarea type="text" id="myTextarea" rows="10" cols="50" > </textarea><br/>
+              <textarea type="text" id="myTextarea" name="text_a" rows="10" cols="50" > </textarea><br/>
               <div>
                 <input class="button" type="submit" name="submit" value="Submit" onclick="return chk()">
                 <input type="button">
