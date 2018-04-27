@@ -5,7 +5,7 @@ function updateDB($sql){
 		die("Connection failed: " . mysqli_connect_error());
 	}
 	if(mysqli_query($conn, $sql)) {
-		echo "New records updated successfully";
+		//echo "New records updated successfully";
 	}
 	else{
 		echo "Error: " . $sql . "<br>" . mysqli_error($conn);
