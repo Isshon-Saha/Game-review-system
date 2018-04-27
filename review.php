@@ -9,7 +9,7 @@
 
 </script>
 <body class="flex-container">
-  <form class="myform" action="review_server.php?title=thw witcher III:wild hunt" method="POST">
+  <form class="myform" action="review_server.php?title=Thw Witcher III:Wild Hunt" method="POST">
     <header><h1 style="text-align:center">
       <?php
           if(isset($_GET["title"]))
