@@ -19,7 +19,7 @@ foreach ($arr as $key) {
   $sum=$sum+$sre["Rating"];
 }
 $rating=$sum/$count;
-$sql="Update game_bank set Rating=".$sum." where G_name='".$_GET["title"]."'";
+$sql="Update game_bank set Rating=".$rating." where G_name='".$_GET["title"]."'";
 $sql="select * from descriptions";
 $tre=getDataFromDB($sql);
 foreach ($tre as $k) {
