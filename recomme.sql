@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 27, 2018 at 04:49 PM
+-- Generation Time: Apr 29, 2018 at 06:08 PM
 -- Server version: 10.1.16-MariaDB
 -- PHP Version: 7.0.9
 
@@ -42,7 +42,19 @@ INSERT INTO `descriptions` (`desc_id`, `description`, `count`, `Rating`) VALUES
 (2, ' asdasdasdzxczxczxc', 0, 1),
 (3, ' asdasdasdzxczxczxc', 0, 1),
 (4, ' dfsdf', 0, 1),
-(5, ' asdasd', 0, 1);
+(5, ' asdasd', 0, 1),
+(6, ' asdasd', 0, 1),
+(7, ' asdasd', 0, 1),
+(8, ' asdasdasd', 0, 1),
+(9, ' sadasda', 0, 1),
+(10, ' sdfsdfs', 0, 1),
+(11, ' asdasdasd', 0, 1),
+(12, ' asdasd', 0, 1),
+(13, ' asdasd', 0, 1),
+(14, ' asdasd', 0, 1),
+(15, ' cvbcvb', 0, 1),
+(16, ' asdasd', 0, 1),
+(17, ' asdasdasd', 0, 1);
 
 -- --------------------------------------------------------
 
@@ -51,7 +63,7 @@ INSERT INTO `descriptions` (`desc_id`, `description`, `count`, `Rating`) VALUES
 --
 
 CREATE TABLE `game_bank` (
-  `G_id` int(11) NOT NULL DEFAULT '0',
+  `G_id` int(11) NOT NULL,
   `G_name` text NOT NULL,
   `G_genre` text NOT NULL,
   `desc_ids` text NOT NULL,
@@ -65,8 +77,9 @@ CREATE TABLE `game_bank` (
 --
 
 INSERT INTO `game_bank` (`G_id`, `G_name`, `G_genre`, `desc_ids`, `tags`, `game_info`, `Rating`) VALUES
-(1, 'Thw Witcher III:Wild Hunt', 'RPG', '', 'Action,RPG,Story,Adventure', 'A casuls game for casuls', 80),
-(2, 'Dark souls III:The Fire Fades Edition', 'RPG', '', 'Action,RPG,Open world', '', 73);
+(1, 'Thw Witcher III:Wild Hunt', 'RPG', ',7,8,9,10,11,17,18', 'Action,RPG,Story,Adventure', 'A casuls game for casuls', 80),
+(2, 'Dark souls III:The Fire Fades Edition', 'RPG', '', 'Action,RPG,Open world', '', 73),
+(3, 'asdasd', 'asddasd', '', 'asdasd', 'asdasd', 0);
 
 -- --------------------------------------------------------
 
@@ -140,7 +153,12 @@ ALTER TABLE `user_info`
 -- AUTO_INCREMENT for table `descriptions`
 --
 ALTER TABLE `descriptions`
-  MODIFY `desc_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `desc_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+--
+-- AUTO_INCREMENT for table `game_bank`
+--
+ALTER TABLE `game_bank`
+  MODIFY `G_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `user_info`
 --
