@@ -7,10 +7,16 @@
     <script src="/Game review system/js/admin_panel.js">
 
     </script>
+    <script src="/Game review system/js/Jquery.js">
+
+    </script>
     <?php require("db_conn.php"); ?>
 </head>
 <body class="flex-body">
-    <header>header</header>
+
+    <header><p style="text-align:right"><a href="logout.php"> Logout</a></p>
+      <h2>Admin panel</h2>
+    </header>
     <div class="content-container">
         <div class="content">
           <!-- Tab links -->
@@ -147,7 +153,7 @@
                  <input type="text" name="tags" placeholder="Enter Tags here"/><br>
                  <label face="verdana"> Description: </label>
                  <input type="text" name="Description" placeholder="Enter description here"/><br>
-                 <input class="button" type="submit" name="submit" value="Insert" onclick="return chk5()">
+                 <input class="button" type="submit" name="submit" value="Update" onclick="return chk5()">
               </table>
             </form>
           </div>
@@ -178,7 +184,7 @@
                  <br>
                  <label face="verdana"> Game name: </label>
                  <input type="text" id="namefield" name="gamename" placeholder="enter game name here"/> <br>
-                 <input class="button" type="submit" name="submit" value="Insert" onclick="return chk6()">
+                 <input class="button" type="submit" name="submit" value="Delete" onclick="return chk6()">
               </table>
             </form>
           </div>

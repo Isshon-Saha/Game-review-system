@@ -9,8 +9,10 @@
 
 </script>
 <body class="flex-container">
-  <form class="myform" action="review_server.php?title=Thw Witcher III:Wild Hunt" method="POST">
-    <header><h1 style="text-align:center">
+  <form class="myform" action="review_server.php?title=<?php echo $_GET["title"] ?>" method="POST">
+    <header>
+      <p style="text-align:right"><a href="logout.php"> Logout</a></p>
+      <h1 style="text-align:center">
       <?php
           if(isset($_GET["title"]))
           {
