@@ -25,12 +25,19 @@
 
           <!-- Tab content -->
           <div id="Create user" class="tabcontent">
-          <h3>London</h3>
-          <p>London is the capital city of England.</p>
+          <form class="myfm" action="admin_panel_server_Uadd.php" method="post">
+            <label face="verdana"> Username: </label>
+            <input type="text" id="namefield" name="username" placeholder="enter username here"/> <br>
+            <label face="verdana"> Password: </label>
+            <input  type="password" name="password" placeholder="enter password here"/><br>
+            <label face="verdana"> Email: </label>
+            <input type="email" name="email" placeholder="enter email here"/><br>
+            <input class="button" type="submit" name="submit" value="Insert" onclick="return chk1()">
+          </form>
           </div>
 
           <div id="Update user profiles" class="tabcontent">
-            <form class="myfm" action="admin_panel_server.php" method="post">
+            <form class="myfm" action="admin_panel_server_Uupdate.php" method="post">
               <table class="table1" style="width:80%" border= 1px>
                 <tr>
                   <th> ID </th>
@@ -50,12 +57,20 @@
                   echo "</tr>";
                 }
                  ?>
+                 <br/>
+                 <label face="verdana"> Username: </label>
+                 <input type="text" id="namefield" name="username" placeholder="enter username here"/> <br>
+                 <label face="verdana"> Password: </label>
+                 <input  type="password" name="password" placeholder="enter password here"/><br>
+                 <label face="verdana"> Email: </label>
+                 <input type="email" name="email" placeholder="enter email here"/><br>
+                 <input class="button" type="submit" name="submit" value="Update" onclick="return chk2()">
               </table>
             </form>
           </div>
 
           <div id="Delete a user" class="tabcontent">
-            <form class="myfm" action="admin_panel_server.php" method="post">
+            <form class="myfm" action="admin_panel_server_Udelete.php" method="post">
               <table class="table1" style="width:80%" border= 1px>
                 <tr>
                   <th> ID </th>
@@ -75,17 +90,33 @@
                   echo "</tr>";
                 }
                  ?>
+                 <br>
+                 <label face="verdana"> Username: </label>
+                 <input type="text" id="namefield" name="username" placeholder="enter username here"/> <br>
+                 <input class="button" type="submit" name="submit" value="Delete" onclick="return chk3()">
               </table>
             </form>
           </div>
 
           <div id="Insert a game" class="tabcontent">
-          <h3>London</h3>
-          <p>London is the capital city of England.</p>
+            <form class="myfm" action="admin_panel_server_Gadd.php" method="post">
+              <label face="verdana"> Game name: </label>
+              <input type="text" id="namefield" name="gamename" placeholder="enter game name here"/> <br>
+              <label face="verdana"> Genre: </label>
+              <input  type="text" name="genre" placeholder="enter Genre here"/><br>
+              <label face="verdana"> Tags: </label>
+              <input type="text" name="tags" placeholder="Enter Tags here"/><br>
+              <label face="verdana"> Description: </label>
+              <input type="text" name="Description" placeholder="Enter description here"/><br>
+              <input class="button" type="submit" name="submit" value="Insert" onclick="return chk4()">
+
+            </form>
+
+
           </div>
 
           <div id="Update game info" class="tabcontent">
-            <form class="myfm" action="admin_panel_server.php" method="post">
+            <form class="myfm" action="admin_panel_server_Gupdate.php" method="post">
               <table class="table1" style="width:80%" border= 1px>
                 <tr>
                   <th> ID </th>
@@ -107,12 +138,22 @@
                   echo "</tr>";
                 }
                  ?>
+                 <br>
+                 <label face="verdana"> Game name: </label>
+                 <input type="text" id="namefield" name="gamename" placeholder="enter game name here"/> <br>
+                 <label face="verdana"> Genre: </label>
+                 <input  type="text" name="genre" placeholder="enter Genre here"/><br>
+                 <label face="verdana"> Tags: </label>
+                 <input type="text" name="tags" placeholder="Enter Tags here"/><br>
+                 <label face="verdana"> Description: </label>
+                 <input type="text" name="Description" placeholder="Enter description here"/><br>
+                 <input class="button" type="submit" name="submit" value="Insert" onclick="return chk5()">
               </table>
             </form>
           </div>
 
           <div id="Delete a game" class="tabcontent">
-            <form class="myfm" action="admin_panel_server.php" method="post">
+            <form class="myfm" action="admin_panel_server_Gdelete.php" method="post">
               <table class="table1" style="width:80%" border= 1px>
                 <tr>
                   <th> ID </th>
@@ -134,6 +175,10 @@
                   echo "</tr>";
                 }
                  ?>
+                 <br>
+                 <label face="verdana"> Game name: </label>
+                 <input type="text" id="namefield" name="gamename" placeholder="enter game name here"/> <br>
+                 <input class="button" type="submit" name="submit" value="Insert" onclick="return chk6()">
               </table>
             </form>
           </div>
