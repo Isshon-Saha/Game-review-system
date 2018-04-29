@@ -30,13 +30,53 @@
           </div>
 
           <div id="Update user profiles" class="tabcontent">
-          <h3>Paris</h3>
-          <p>Paris is the capital of France.</p>
+            <form class="myfm" action="admin_panel_server.php" method="post">
+              <table class="table1" style="width:80%" border= 1px>
+                <tr>
+                  <th> ID </th>
+                  <th> Name</th>
+                  <th> Password(Hash value) </th>
+                  <th> Email </th>
+                </tr>
+
+                <?php $sql="select * from user_info";
+                $res=getDataFromDB($sql);
+                foreach ($res as $key) {
+                  echo "<tr>";
+                  echo "<td>".$key["U_id"]."</td>";
+                  echo "<td>".$key["U_name"]."</td>";
+                  echo "<td>".$key["U_pass"]."</td>";
+                  echo "<td>".$key["U_email"]."</td>";
+                  echo "</tr>";
+                }
+                 ?>
+              </table>
+            </form>
           </div>
 
           <div id="Delete a user" class="tabcontent">
-          <h3>Tokyo</h3>
-          <p>Tokyo is the capital of Japan.</p>
+            <form class="myfm" action="admin_panel_server.php" method="post">
+              <table class="table1" style="width:80%" border= 1px>
+                <tr>
+                  <th> ID </th>
+                  <th> Name</th>
+                  <th> Password(Hash value) </th>
+                  <th> Email </th>
+                </tr>
+
+                <?php $sql="select * from user_info";
+                $res=getDataFromDB($sql);
+                foreach ($res as $key) {
+                  echo "<tr>";
+                  echo "<td>".$key["U_id"]."</td>";
+                  echo "<td>".$key["U_name"]."</td>";
+                  echo "<td>".$key["U_pass"]."</td>";
+                  echo "<td>".$key["U_email"]."</td>";
+                  echo "</tr>";
+                }
+                 ?>
+              </table>
+            </form>
           </div>
 
           <div id="Insert a game" class="tabcontent">
@@ -45,13 +85,57 @@
           </div>
 
           <div id="Update game info" class="tabcontent">
-          <h3>Paris</h3>
-          <p>Paris is the capital of France.</p>
+            <form class="myfm" action="admin_panel_server.php" method="post">
+              <table class="table1" style="width:80%" border= 1px>
+                <tr>
+                  <th> ID </th>
+                  <th> Name</th>
+                  <th> Genre </th>
+                  <th> Tags </th>
+                  <th> Game description  </th>
+                </tr>
+
+                <?php $sql="select * from game_bank";
+                $res=getDataFromDB($sql);
+                foreach ($res as $key) {
+                  echo "<tr>";
+                  echo "<td>".$key["G_id"]."</td>";
+                  echo "<td>".$key["G_name"]."</td>";
+                  echo "<td>".$key["G_genre"]."</td>";
+                  echo "<td>".$key["tags"]."</td>";
+                  echo "<td>".$key["game_info"]."</td>";
+                  echo "</tr>";
+                }
+                 ?>
+              </table>
+            </form>
           </div>
 
           <div id="Delete a game" class="tabcontent">
-          <h3>Tokyo</h3>
-          <p>Tokyo is the capital of Japan.</p>
+            <form class="myfm" action="admin_panel_server.php" method="post">
+              <table class="table1" style="width:80%" border= 1px>
+                <tr>
+                  <th> ID </th>
+                  <th> Name</th>
+                  <th> Genre </th>
+                  <th> Tags </th>
+                  <th> Game description  </th>
+                </tr>
+
+                <?php $sql="select * from game_bank";
+                $res=getDataFromDB($sql);
+                foreach ($res as $key) {
+                  echo "<tr>";
+                  echo "<td>".$key["G_id"]."</td>";
+                  echo "<td>".$key["G_name"]."</td>";
+                  echo "<td>".$key["G_genre"]."</td>";
+                  echo "<td>".$key["tags"]."</td>";
+                  echo "<td>".$key["game_info"]."</td>";
+                  echo "</tr>";
+                }
+                 ?>
+              </table>
+            </form>
           </div>
         </div>
         <div class="sidebar1">side1</div>

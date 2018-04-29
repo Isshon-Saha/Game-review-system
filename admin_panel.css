@@ -10,7 +10,10 @@
     flex: 1;
 }
 
-
+.table1{
+  text-align: center;
+  align-items: center;
+}
 .content{
     flex:1;
 }
@@ -56,4 +59,5 @@
     padding: 6px 12px;
     border: 1px solid #ccc;
     border-top: none;
+    align-self: center;
 }
