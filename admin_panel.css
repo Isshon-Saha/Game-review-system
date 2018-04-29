@@ -1,6 +1,7 @@
 
 .flex-body{
     display: flex;
+    color: #ff0000;
     flex-direction: column;
     min-height: 100vh;
 }
@@ -25,14 +26,14 @@
 .sidebar1{
     order: -1;
 }
-/* Style the tab */
+
 .tab {
     overflow: hidden;
     border: 1px solid #ccc;
     background-color: #f1f1f1;
 }
 
-/* Style the buttons that are used to open the tab content */
+
 .tab button {
     background-color: inherit;
     float: center;

@@ -15,7 +15,7 @@
 <body class="flex-body">
 
     <header><p style="text-align:right"><a href="logout.php"> Logout</a></p>
-      <h2>Admin panel</h2>
+      <h2 style="text-align:center">Admin panel</h2>
     </header>
     <div class="content-container">
         <div class="content">
@@ -189,9 +189,9 @@
             </form>
           </div>
         </div>
-        <div class="sidebar1">side1</div>
-        <div class="sidebar2">side2</div>
+        <div class="sidebar1"></div>
+        <div class="sidebar2"></div>
     </div>
-    <footer>footer</footer>
+    <footer></footer>
 </body>
 </html

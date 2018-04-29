@@ -29,9 +29,6 @@
         <div class="content">
 
           <div class="game_area">
-            <div class="image">
-                <h1><img src="game.jpg"></h1>
-            </div>
             <div class="desc">
               <?php
               $name= $_GET["title"];
