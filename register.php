@@ -51,14 +51,27 @@
       $handle = fopen($my_file, 'a') or die('Cannot open file:  '.$my_file); ;
       $data = "\n\r".$username." ".$password;
       fwrite($handle, $data);*/
-	  
+
 	  $password=md5($password);
 	  $s="insert into user_info(U_name,U_pass,U_email) values('".$username."','".$password."','".$email."')";
 	  $res=updateDB($s);
       echo "<h3 style='color: blue'> Registration Successful!!</h3>";
       echo "<a href='.'>Home</a>";
+      $s="Create table ".$username." (genre text, counter int(11))";
+      $res=updateDB($s);
+      $s="insert into ".$username." values('RPG',0)";
+      $res=updateDB($s);
+      $s="insert into ".$username." values('Racing',0)";
+      $res=updateDB($s);
+      $s="insert into ".$username." values('Strategy',0)";
+      $res=updateDB($s);
+      $s="insert into ".$username." values('Action',0)";
+      $res=updateDB($s);
+      $s="insert into ".$username." values('Puzzle',0)";
+      $res=updateDB($s);
+      header("Location:registration.php");
     }
-  } 
+  }
 
 
 

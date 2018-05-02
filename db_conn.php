@@ -55,8 +55,9 @@ function getDataFromGameBank(){
 
 function getDataFromRecommended(){
 	$conn = mysqli_connect("localhost", "root", "","recomme");
-	$sql = "select * from recommended";
-	$result = mysqli_query($conn, $sql)or die(mysqli_error($conn));
+	//print_r($_COOKIE);
+	$sql = "select * from game_bank where G_genre=(select genre from ".$_COOKIE["name"]." where counter=(select max(counter) from ".$_COOKIE["name"].")) and rating>=3";
+  $result = mysqli_query($conn, $sql)or die(mysqli_error($conn));
 	$arr=array();
 	//print_r($result);
 	while($row = mysqli_fetch_assoc($result)) {
@@ -67,7 +68,7 @@ function getDataFromRecommended(){
 
 function getDataFromEditorsChoice(){
 	$conn = mysqli_connect("localhost", "root", "","recomme");
-	$sql = "select * from editors_choice";
+	$sql = "select * from game_bank where Editors_choice='yes'";
 	$result = mysqli_query($conn, $sql)or die(mysqli_error($conn));
 	$arr=array();
 	//print_r($result);
@@ -79,7 +80,7 @@ function getDataFromEditorsChoice(){
 
 function getDataFromPopular(){
 	$conn = mysqli_connect("localhost", "root", "","recomme");
-	$sql = "select * from popular";
+	$sql = "select * from game_bank where rating>=4";
 	$result = mysqli_query($conn, $sql)or die(mysqli_error($conn));
 	$arr=array();
 	//print_r($result);

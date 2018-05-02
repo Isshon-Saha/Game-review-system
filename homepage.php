@@ -64,53 +64,6 @@ $popularData = getDataFromPopular();
                </tr>
              <?php endforeach; ?>
 
-
-                          <?php foreach($recommendedData as $key=>$value): ?>
-                            <tr>
-                              <th><?php echo $value['G_genre'] ?></th>
-                              <th>
-                               <a href="review.php?title=<?php echo $value['G_name'] ?>"> <?php echo $value['G_name'] ?> </a>
-                              </th>
-                              <td>
-                                <?php for ($i=0; $i < $value['Rating']; $i++): ?>
-                                  <span class="fa fa-star checked"></span>
-                                <?php endfor; ?>
-                            </td>
-                            </tr>
-                          <?php endforeach; ?>
-
-
-
-                                       <?php foreach($editorsChoice as $key=>$value): ?>
-                                         <tr>
-                                           <th><?php echo $value['G_genre'] ?></th>
-                                           <th>
-                                            <a href="review.php?title=<?php echo $value['G_name'] ?>"> <?php echo $value['G_name'] ?> </a>
-                                           </th>
-                                           <td>
-                                             <?php for ($i=0; $i < $value['Rating']; $i++): ?>
-                                               <span class="fa fa-star checked"></span>
-                                             <?php endfor; ?>
-                                         </td>
-                                         </tr>
-                                       <?php endforeach; ?>
-
-
-
-                                                    <?php foreach($popularData as $key=>$value): ?>
-                                                      <tr>
-                                                        <th><?php echo $value['G_genre'] ?></th>
-                                                        <th>
-                                                         <a href="review.php?title=<?php echo $value['G_name'] ?>"> <?php echo $value['G_name'] ?> </a>
-                                                        </th>
-                                                        <td>
-                                                          <?php for ($i=0; $i < $value['Rating']; $i++): ?>
-                                                            <span class="fa fa-star checked"></span>
-                                                          <?php endfor; ?>
-                                                      </td>
-                                                      </tr>
-                                                    <?php endforeach; ?>
-
            </table>
           </div>
           <div id="c1" class="tabcontent">
