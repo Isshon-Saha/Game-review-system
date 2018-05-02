@@ -1,7 +1,7 @@
 <script type="text/javascript">
 function chk(){
 	var flag=true;
-	var l=document.forms[0].elements[0].value.length;
+	var l=document.getElementById('name').value.length;
 	var lp=document.forms[0].pass.value.length;
 	if(l==0){
 		alert("Username empty");
@@ -34,7 +34,7 @@ function chk(){
 
 <body bgcolor="#E6E6FA">
 <font  face="verdana">User Name :</font>
-<input value="" type="text" name="name" " /><br><br/>
+<input id="name" value="" type="text" name="name" " /><br><br/>
 <font  face="verdana">Password  :</font> <input type="password" name="pass" /><br>
 <br><br/>
 <input type="submit" value="Login" class="button" onclick="return chk()"/>

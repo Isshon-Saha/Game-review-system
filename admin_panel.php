@@ -4,10 +4,10 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="admin_panel.css">
-    <script src="/Game review system/js/admin_panel.js">
+    <script src="./js/admin_panel.js">
 
     </script>
-    <script src="/Game review system/js/Jquery.js">
+    <script src="./js/Jquery.js">
 
     </script>
     <?php require("db_conn.php"); ?>

@@ -70,6 +70,5 @@
 
 
 
-    <footer> <h2 style="text-align:center">Footer</h2></footer>
     </form>
 </body>
