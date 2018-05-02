@@ -140,8 +140,37 @@ function chk6()
   return flag;
 }
 
+function chk7()
+{
+  debugger;
+  var flag=true;
+  var nl=document.forms[6].elements[0].value.length;
+  if(nl==0)
+  {
+    alert("name field empty");
+    flag=false;
+  }
+
+  return flag;
+}
+
+function chk8()
+{
+  debugger;
+  var flag=true;
+  var nl=document.forms[7].elements[0].value.length;
+  if(nl==0)
+  {
+    alert("name field empty");
+    flag=false;
+  }
+
+  return flag;
+}
+
 
 function openCity(evt, cityName) {
+  debugger;
     // Declare all variables
     var i, tabcontent, tablinks;
 

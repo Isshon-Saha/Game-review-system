@@ -27,6 +27,8 @@
           <button class="tablinks" onclick="openCity(event, 'Insert a game')">Insert a game</button>
           <button class="tablinks" onclick="openCity(event, 'Update game info')">Update game info</button>
           <button class="tablinks" onclick="openCity(event, 'Delete a game')">Delete a game</button>
+          <button class="tablinks" onclick="openCity(event, 'Editors choice')">Editor's choice</button>
+          <button class="tablinks" onclick="openCity(event, 'Editors choice_na')"> Remove from Editor's choice</button>
           </div>
 
           <!-- Tab content -->
@@ -185,6 +187,68 @@
                  <label face="verdana"> Game name: </label>
                  <input type="text" id="namefield" name="gamename" placeholder="enter game name here"/> <br>
                  <input class="button" type="submit" name="submit" value="Delete" onclick="return chk6()">
+              </table>
+            </form>
+          </div>
+
+          <div id="Editors choice" class="tabcontent">
+            <form class="myfm" action="admin_panel_server_choice.php" method="post">
+              <table class="table1" style="width:80%" border= 1px>
+                <tr>
+                  <th> ID </th>
+                  <th> Name</th>
+                  <th> Genre </th>
+                  <th> Tags </th>
+                  <th> Game description  </th>
+                </tr>
+
+                <?php $sql="select * from game_bank where Rating>= 5 and Editors_choice != 'yes'";
+                $res=getDataFromDB($sql);
+                foreach ($res as $key) {
+                  echo "<tr>";
+                  echo "<td>".$key["G_id"]."</td>";
+                  echo "<td>".$key["G_name"]."</td>";
+                  echo "<td>".$key["G_genre"]."</td>";
+                  echo "<td>".$key["tags"]."</td>";
+                  echo "<td>".$key["game_info"]."</td>";
+                  echo "</tr>";
+                }
+                 ?>
+                 <br>
+                 <label face="verdana"> Game name: </label>
+                 <input type="text" id="namefield" name="gamename" placeholder="enter game name here"/> <br>
+                 <input class="button" type="submit" name="submit" value="Make it editor's choice" onclick="return chk7()">
+              </table>
+            </form>
+          </div>
+
+          <div id="Editors choice_na" class="tabcontent">
+            <form class="myfm" action="admin_panel_server_choice_na.php" method="post">
+              <table class="table1" style="width:80%" border= 1px>
+                <tr>
+                  <th> ID </th>
+                  <th> Name</th>
+                  <th> Genre </th>
+                  <th> Tags </th>
+                  <th> Game description  </th>
+                </tr>
+
+                <?php $sql="select * from game_bank where Editors_choice = 'yes'";
+                $res=getDataFromDB($sql);
+                foreach ($res as $key) {
+                  echo "<tr>";
+                  echo "<td>".$key["G_id"]."</td>";
+                  echo "<td>".$key["G_name"]."</td>";
+                  echo "<td>".$key["G_genre"]."</td>";
+                  echo "<td>".$key["tags"]."</td>";
+                  echo "<td>".$key["game_info"]."</td>";
+                  echo "</tr>";
+                }
+                 ?>
+                 <br>
+                 <label face="verdana"> Game name: </label>
+                 <input type="text" id="namefield" name="gamename" placeholder="enter game name here"/> <br>
+                 <input class="button" type="submit" name="submit" value="Remove from editor's choice" onclick="return chk8()">
               </table>
             </form>
           </div>
