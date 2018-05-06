@@ -2,27 +2,83 @@ function chk1()
 {
   debugger;
   var flag=true;
-  var nl=document.forms[0].elements[0].value.length;
-  var pl=document.forms[0].elements[1].value.length;
-  var el=document.forms[0].elements[2].value.length;
-  if(nl==0)
-  {
-    alert("name field empty");
+  var l=document.forms[0].elements[0].value.length;
+  var le=document.forms[0].elements[1].value.length;
+  var lep=document.forms[0].elements[1].value;
+  var hint=document.getElementById("hint1").innerHTML;
+  var lp=document.forms[0].elements[2].value.length;
+  var p=document.forms[0].elements[2].value;
+  if(l==0){
+    document.getElementById("hint1").style.visibility="visible";
+    document.getElementById("hint1").innerHTML="Username field empty";
     flag=false;
   }
-  if(pl==0)
-  {
-    alert("password field empty");
+  else if(le==0){
+    document.getElementById("hint2").style.visibility="visible";
+    document.getElementById("hint2").innerHTML="Password field empty";
     flag=false;
   }
-  if(el==0)
+  else if(p.search(".com")==-1)
   {
-    alert("email field empty");
+    document.getElementById("hint3").style.visibility="visible";
+    document.getElementById("hint3").innerHTML="Invalid email";
     flag=false;
+  }
+  else if(lp==0){
+    document.getElementById("hint3").style.visibility="visible";
+    document.getElementById("hint3").innerHTML="Email field empty";
+    flag=false;
+  }
+  else if (le<6) {
+    document.getElementById("hint2").style.visibility="visible";
+    document.getElementById("hint2").innerHTML="Enter atleast 6 characters";
+    flag=false;
+
+  }
+  else if (hint=="name already exists") {
+    flag=false;
+  }
+  else if(flag==true)
+  {
+    document.getElementById("hint5").style.visibility="visible";
+    document.getElementById("hint5").innerHTML="Registration Successful";
+  }
+  if(flag==false)
+  {
+    document.getElementById("hint5").style.visibility="visible";
+    document.getElementById("hint5").innerHTML="Please fillup the form correctly";
+  }
+  return flag;
   }
 
-  return flag;
-}
+  function testChk (){
+
+		var v=document.getElementById("namefield").value;
+		var l=document.getElementById("namefield").value.length;
+		var xmlhttp= new XMLHttpRequest()
+		xmlhttp.onreadystatechange=function()
+		{
+			if (xmlhttp.readyState == 4 && xmlhttp.status == 200)
+			{
+				debugger;
+				document.getElementById("hint1").style.visibility="visible";
+				document.getElementById("hint1").innerHTML=xmlhttp.responseText;
+				/*if(xmlhttp.responseText=="name already exists")
+				{
+					document.getElementById("namefield").value="";
+				}*/
+				if(l==0)
+				{
+					document.getElementById("hint1").style.visibility="hidden";
+				}
+
+			}
+		}
+		var url="register.php?uname="+v;
+		xmlhttp.open("GET", url,true);
+		xmlhttp.send();
+
+	}
 
 function chk2()
 {
@@ -31,22 +87,24 @@ function chk2()
   var nl=document.forms[1].elements[0].value.length;
   var pl=document.forms[1].elements[1].value.length;
   var el=document.forms[1].elements[2].value.length;
-  if(nl==0)
-  {
-    alert("name field empty");
-    flag=false;
-  }
-  if(pl==0)
-  {
-    alert("password field empty");
-    flag=false;
-  }
-  if(el==0)
-  {
-    alert("email field empty");
-    flag=false;
-  }
 
+  if(nl==0 && pl==0 && el==0)
+  {
+    alert("No input found");
+    flag=false;
+  }
+  else if (nl==0) {
+    alert("Enter name please");
+    flag=false;
+  }
+  if (el !=0) {
+    var e=document.forms[1].elements[2].value;
+    if(e.search("@")==-1 || e.search(".com")==-1)
+    {
+      alert("Invalid email format");
+      flag=false;
+    }
+  }
   return flag;
 }
 
@@ -77,17 +135,17 @@ function chk4()
     alert("name field empty");
     flag=false;
   }
-  if(gel==0)
+  else if(gel==0)
   {
     alert("genre field empty");
     flag=false;
   }
-  if(tl==0)
+  else if(tl==0)
   {
     alert("Tag field empty");
     flag=false;
   }
-  if(dl==0)
+  else if(dl==0)
   {
     alert("Description field empty");
     flag=false;
@@ -103,26 +161,15 @@ function chk5()
   var gel=document.forms[4].elements[1].value.length;
   var tl=document.forms[4].elements[2].value.length;
   var dl=document.forms[4].elements[3].value.length;
-  if(gl==0)
+  if(gl==0 && gel==0 && tl==0 && dl==0)
   {
-    alert("name field empty");
+    alert("No input found");
     flag=false;
   }
-  if(gel==0)
-  {
-    alert("genre field empty");
-    flag=false;
+  else if (gl==0) {
+    alert("Enter name please")
   }
-  if(tl==0)
-  {
-    alert("Tag field empty");
-    flag=false;
-  }
-  if(dl==0)
-  {
-    alert("Description field empty");
-    flag=false;
-  }
+
   return flag;
 }
 

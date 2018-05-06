@@ -25,7 +25,18 @@ if(isset($_SESSION["flag"]) && $_SESSION["flag"]=="success" && isset($_COOKIE['n
 
         $sql="insert into user_info( U_name,U_pass,U_email ) values( '".$name."','".$password."','".$email."')";
         $res=updateDB($sql);
-        echo $res;
+        $s="Create table ".$name." (genre text, counter int(11))";
+        $res=updateDB($s);
+        $s="insert into ".$name." values('RPG',0)";
+        $res=updateDB($s);
+        $s="insert into ".$name." values('Racing',0)";
+        $res=updateDB($s);
+        $s="insert into ".$name." values('Strategy',0)";
+        $res=updateDB($s);
+        $s="insert into ".$name." values('Action',0)";
+        $res=updateDB($s);
+        $s="insert into ".$name." values('Puzzle',0)";
+        $res=updateDB($s);
         header("Location:admin_panel.php");
 }
 else {

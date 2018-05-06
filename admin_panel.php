@@ -35,11 +35,15 @@
           <div id="Create user" class="tabcontent">
           <form class="myfm" action="admin_panel_server_Uadd.php" method="post">
             <label face="verdana"> Username: </label>
-            <input type="text" id="namefield" name="username" placeholder="enter username here"/> <br>
+            <input type="text" id="namefield" name="username" placeholder="enter username here" onkeyup="testChk()"/>
+            <label face="verdana" id="hint1" style="visibility:hidden"> </label> <br>
             <label face="verdana"> Password: </label>
-            <input  type="password" name="password" placeholder="enter password here"/><br>
+            <input  type="password" name="password" placeholder="enter password here"/>
+            <label face="verdana" id="hint2" style="visibility:hidden"> </label><br>
             <label face="verdana"> Email: </label>
-            <input type="email" name="email" placeholder="enter email here"/><br>
+            <input type="email" name="email" placeholder="enter email here"/>
+            <label face="verdana" id="hint3" style="visibility:hidden"> </label><br>
+            <label face="verdana" id="hint5" style="visibility:hidden"> </label><br>
             <input class="button" type="submit" name="submit" value="Insert" onclick="return chk1()">
           </form>
           </div>
@@ -67,7 +71,15 @@
                  ?>
                  <br/>
                  <label face="verdana"> Username: </label>
-                 <input type="text" id="namefield" name="username" placeholder="enter username here"/> <br>
+                 <select id="namefield" name="username">
+                   <?php
+                      $sql="select * from user_info";
+                      $res=getDataFromDB($sql);
+                      foreach ($res as $key) {
+                        echo "<option value='".$key["U_name"]."'>".$key["U_name"]."</option>";
+                      }
+                    ?>
+                 </select> <br>
                  <label face="verdana"> Password: </label>
                  <input  type="password" name="password" placeholder="enter password here"/><br>
                  <label face="verdana"> Email: </label>
@@ -100,7 +112,15 @@
                  ?>
                  <br>
                  <label face="verdana"> Username: </label>
-                 <input type="text" id="namefield" name="username" placeholder="enter username here"/> <br>
+                 <select id="namefield" name="username">
+                   <?php
+                      $sql="select * from user_info";
+                      $res=getDataFromDB($sql);
+                      foreach ($res as $key) {
+                        echo "<option value='".$key["U_name"]."'>".$key["U_name"]."</option>";
+                      }
+                    ?>
+                 </select> <br>
                  <input class="button" type="submit" name="submit" value="Delete" onclick="return chk3()">
               </table>
             </form>
@@ -148,7 +168,15 @@
                  ?>
                  <br>
                  <label face="verdana"> Game name: </label>
-                 <input type="text" id="namefield" name="gamename" placeholder="enter game name here"/> <br>
+                 <select id="namefield" name="gamename">
+                   <?php
+                      $sql="select * from game_bank";
+                      $res=getDataFromDB($sql);
+                      foreach ($res as $key) {
+                        echo "<option value='".$key["G_name"]."'>".$key["G_name"]."</option>";
+                      }
+                    ?>
+                 </select> <br>
                  <label face="verdana"> Genre: </label>
                  <input  type="text" name="genre" placeholder="enter Genre here"/><br>
                  <label face="verdana"> Tags: </label>
@@ -185,7 +213,15 @@
                  ?>
                  <br>
                  <label face="verdana"> Game name: </label>
-                 <input type="text" id="namefield" name="gamename" placeholder="enter game name here"/> <br>
+                 <select id="namefield" name="gamename">
+                   <?php
+                      $sql="select * from game_bank";
+                      $res=getDataFromDB($sql);
+                      foreach ($res as $key) {
+                        echo "<option value='".$key["G_name"]."'>".$key["G_name"]."</option>";
+                      }
+                    ?>
+                 </select> <br>
                  <input class="button" type="submit" name="submit" value="Delete" onclick="return chk6()">
               </table>
             </form>
@@ -216,7 +252,15 @@
                  ?>
                  <br>
                  <label face="verdana"> Game name: </label>
-                 <input type="text" id="namefield" name="gamename" placeholder="enter game name here"/> <br>
+                 <select id="namefield" name="gamename">
+                   <?php
+                      $sql="select * from game_bank where Rating>= 5 and Editors_choice != 'yes'";
+                      $res=getDataFromDB($sql);
+                      foreach ($res as $key) {
+                        echo "<option value='".$key["G_name"]."'>".$key["G_name"]."</option>";
+                      }
+                    ?>
+                 </select> <br>
                  <input class="button" type="submit" name="submit" value="Make it editor's choice" onclick="return chk7()">
               </table>
             </form>
@@ -247,7 +291,15 @@
                  ?>
                  <br>
                  <label face="verdana"> Game name: </label>
-                 <input type="text" id="namefield" name="gamename" placeholder="enter game name here"/> <br>
+                 <select id="namefield" name="gamename">
+                   <?php
+                      $sql="select * from game_bank where Rating>= 5 and Editors_choice = 'yes'";
+                      $res=getDataFromDB($sql);
+                      foreach ($res as $key) {
+                        echo "<option value='".$key["G_name"]."'>".$key["G_name"]."</option>";
+                      }
+                    ?>
+                 </select> <br>
                  <input class="button" type="submit" name="submit" value="Remove from editor's choice" onclick="return chk8()">
               </table>
             </form>
