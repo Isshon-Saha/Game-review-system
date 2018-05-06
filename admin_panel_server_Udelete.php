@@ -14,6 +14,8 @@ if(isset($_SESSION["flag"]) && $_SESSION["flag"]=="success" && isset($_COOKIE['n
 
         $sql="Delete from user_info where U_name='".$name."'";
         $res=updateDB($sql);
+        $sql="Drop table ".$name."";
+        $res=updateDB($sql);
         header("Location:admin_panel.php");
 }
 else {

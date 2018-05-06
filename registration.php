@@ -63,6 +63,9 @@ function chk(){
 	}
 	return flag;
 }
+function goBack() {
+    window.history.back();
+}
 function aj()
 {
 	var v=document.getElementById("namefield").value;
@@ -165,7 +168,7 @@ function aj()
 		<label face="verdana" id="hint5" style="visibility:hidden"> </label><br>
     <input class="button" type="submit" name="submit" value="Register" onclick="return chk()">
 
-    <input type="button" class="button" name="gp_back" value="Go Back" onclick="window.location = '.'"/> <br>
+    <input type="button" class="button" name="gp_back" value="Go Back" onclick="goBack()"/> <br>
  </form>
 
 </body>

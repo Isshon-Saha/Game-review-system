@@ -57,7 +57,7 @@
               <textarea type="text" id="myTextarea" name="text_a" rows="10" cols="50" > </textarea><br/>
               <div>
                 <input class="button" type="submit" name="submit" value="Submit" onclick="return chk()">
-                <input type="button">
+                <input type="button" class="button" name="gp_back" value="Go Back" onclick="window.location = '.'"/> <br>
               </div>
             </fieldset>
 
