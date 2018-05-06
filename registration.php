@@ -1,26 +1,65 @@
 <!DOCTYPE html>
 <script type="text/javascript">
 function chk(){
+	debugger;
 	var flag=true;
 	var l=document.forms[0].elements[0].value.length;
 	var le=document.forms[0].elements[1].value.length;
+	var lep=document.forms[0].elements[1].value;
+	var hint=document.getElementById("hint1").innerHTML;
 	var lp=document.forms[0].elements[2].value.length;
+	var p=document.forms[0].elements[2].value;
 	var lcp=document.forms[0].elements[3].value.length;
+	var cp=document.forms[0].elements[3].value;
 	if(l==0){
-		alert("Username field empty");
+		document.getElementById("hint1").style.visibility="visible";
+		document.getElementById("hint1").innerHTML="Username field empty";
 		flag=false;
 	}
 	else if(le==0){
-		alert("email field empty");
+		document.getElementById("hint2").style.visibility="visible";
+		document.getElementById("hint2").innerHTML="Email field empty";
+		flag=false;
+	}
+	else if(lep.search(".com")==-1)
+	{
+		document.getElementById("hint2").style.visibility="visible";
+		document.getElementById("hint2").innerHTML="Invalid email";
 		flag=false;
 	}
 	else if(lp==0){
-		alert("password field empty");
+		document.getElementById("hint3").style.visibility="visible";
+		document.getElementById("hint3").innerHTML="Password field empty";
 		flag=false;
 	}
-	else if(lcp==0){
-		alert("confirm password field empty");
+	else if (lp<6) {
+		document.getElementById("hint3").style.visibility="visible";
+		document.getElementById("hint3").innerHTML="Enter atleast 6 characters";
 		flag=false;
+
+	}
+	else if(lcp==0){
+		document.getElementById("hint4").style.visibility="visible";
+		document.getElementById("hint4").innerHTML="<-Field empty";
+		flag=false;
+	}
+	else if (p!=cp) {
+		document.getElementById("hint4").style.visibility="visible";
+		document.getElementById("hint4").innerHTML="<-Not same as the field above";
+		flag=false;
+	}
+	else if (hint=="name already exists") {
+		flag=false;
+	}
+	else if(flag==true)
+	{
+		document.getElementById("hint5").style.visibility="visible";
+		document.getElementById("hint5").innerHTML="Registration Successful";
+	}
+	if(flag==false)
+	{
+		document.getElementById("hint5").style.visibility="visible";
+		document.getElementById("hint5").innerHTML="Please fillup the form correctly";
 	}
 	return flag;
 }
@@ -34,7 +73,7 @@ function aj()
 		{
 			document.getElementById("hint1").style.visibility="visible";
 			document.getElementById("hint1").innerHTML=xmlhttp.responseText;
-			
+
 		}
 	}
 	var url="register.php?uname="+v;
@@ -70,7 +109,7 @@ function aj()
 
 <script>
 	function testChk (){
-		
+
 		var v=document.getElementById("namefield").value;
 		var l=document.getElementById("namefield").value.length;
 		var xmlhttp= new XMLHttpRequest()
@@ -81,21 +120,21 @@ function aj()
 				debugger;
 				document.getElementById("hint1").style.visibility="visible";
 				document.getElementById("hint1").innerHTML=xmlhttp.responseText;
-				if(xmlhttp.responseText=="name already exists")
+				/*if(xmlhttp.responseText=="name already exists")
 				{
 					document.getElementById("namefield").value="";
-				}
+				}*/
 				if(l==0)
 				{
 					document.getElementById("hint1").style.visibility="hidden";
 				}
-				
+
 			}
 		}
 		var url="register.php?uname="+v;
 		xmlhttp.open("GET", url,true);
 		xmlhttp.send();
-			
+
 	}
 </script>
 </head>
@@ -111,17 +150,21 @@ function aj()
 
     <label face="verdana"> Email: </label>
     <input type="email" name="email" placeholder="enter email here"/>
+		<label face="verdana" id="hint2" style="visibility:hidden"> </label>
     <br/>
 
     <label face="verdana"> Password: </label>
     <input  type="password" name="password" placeholder="enter password here"/>
+		<label face="verdana" id="hint3" style="visibility:hidden"> </label>
     <br/>
 
     <label face="verdana">Confirm Password: </label>
     <input  type="password" name="confirm_password" placeholder="enter password again here"/>
+		<label face="verdana" id="hint4" style="visibility:hidden"> </label>
     <br/>
-
+		<label face="verdana" id="hint5" style="visibility:hidden"> </label><br>
     <input class="button" type="submit" name="submit" value="Register" onclick="return chk()">
+
     <input type="button" class="button" name="gp_back" value="Go Back" onclick="window.location = '.'"/> <br>
  </form>
 

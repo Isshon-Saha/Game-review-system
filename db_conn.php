@@ -56,7 +56,7 @@ function getDataFromGameBank(){
 function getDataFromRecommended(){
 	$conn = mysqli_connect("localhost", "root", "","recomme");
 	//print_r($_COOKIE);
-	$sql = "select * from game_bank where G_genre=(select genre from ".$_COOKIE["name"]." where counter=(select max(counter) from ".$_COOKIE["name"].")) and rating>=3";
+	$sql = "select * from game_bank having G_genre in (select genre from ".$_COOKIE["name"]." where counter=(select max(counter) from ".$_COOKIE["name"]."))";
   $result = mysqli_query($conn, $sql)or die(mysqli_error($conn));
 	$arr=array();
 	//print_r($result);
