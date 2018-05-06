@@ -131,7 +131,13 @@
               <label face="verdana"> Game name: </label>
               <input type="text" id="namefield" name="gamename" placeholder="enter game name here"/> <br>
               <label face="verdana"> Genre: </label>
-              <input  type="text" name="genre" placeholder="enter Genre here"/><br>
+              <select>
+                <option value="RPG">RPG</option>
+                <option value="Racing">Racing</option>
+                <option value="Strategy">Strategy</option>
+                <option value="Action">Action</option>
+                <option value="Puzzle">Puzzle</option>
+              </select><br>
               <label face="verdana"> Tags: </label>
               <input type="text" name="tags" placeholder="Enter Tags here"/><br>
               <label face="verdana"> Description: </label>
@@ -178,7 +184,13 @@
                     ?>
                  </select> <br>
                  <label face="verdana"> Genre: </label>
-                 <input  type="text" name="genre" placeholder="enter Genre here"/><br>
+                 <select name="genre">
+                   <option value="RPG">RPG</option>
+                   <option value="Racing">Racing</option>
+                   <option value="Strategy">Strategy</option>
+                   <option value="Action">Action</option>
+                   <option value="Puzzle">Puzzle</option>
+                 </select><br>
                  <label face="verdana"> Tags: </label>
                  <input type="text" name="tags" placeholder="Enter Tags here"/><br>
                  <label face="verdana"> Description: </label>
