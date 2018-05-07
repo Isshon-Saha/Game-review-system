@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: May 02, 2018 at 08:02 PM
+-- Generation Time: May 07, 2018 at 05:36 AM
 -- Server version: 10.1.16-MariaDB
 -- PHP Version: 7.0.9
 
@@ -37,6 +37,72 @@ CREATE TABLE `adam` (
 
 INSERT INTO `adam` (`genre`, `counter`) VALUES
 ('RPG', 1),
+('Racing', 0),
+('Strategy', 0),
+('Action', 0),
+('Puzzle', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `asdasd`
+--
+
+CREATE TABLE `asdasd` (
+  `genre` text,
+  `counter` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `asdasd`
+--
+
+INSERT INTO `asdasd` (`genre`, `counter`) VALUES
+('RPG', 0),
+('Racing', 0),
+('Strategy', 0),
+('Action', 0),
+('Puzzle', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `aurko`
+--
+
+CREATE TABLE `aurko` (
+  `genre` text,
+  `counter` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `aurko`
+--
+
+INSERT INTO `aurko` (`genre`, `counter`) VALUES
+('RPG', 0),
+('Racing', 0),
+('Strategy', 0),
+('Action', 0),
+('Puzzle', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `ddd`
+--
+
+CREATE TABLE `ddd` (
+  `genre` text,
+  `counter` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `ddd`
+--
+
+INSERT INTO `ddd` (`genre`, `counter`) VALUES
+('RPG', 0),
 ('Racing', 0),
 ('Strategy', 0),
 ('Action', 0),
@@ -103,7 +169,74 @@ INSERT INTO `descriptions` (`desc_id`, `description`, `count`, `Rating`) VALUES
 (41, ' sadasd', 0, 5),
 (42, ' sadasd', 0, 5),
 (43, ' asdasd', 0, 4),
-(44, ' asdasd', 0, 4);
+(44, ' asdasd', 0, 4),
+(45, ' sdfsdf', 0, 5);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `erty`
+--
+
+CREATE TABLE `erty` (
+  `genre` text,
+  `counter` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `erty`
+--
+
+INSERT INTO `erty` (`genre`, `counter`) VALUES
+('RPG', 0),
+('Racing', 0),
+('Strategy', 0),
+('Action', 0),
+('Puzzle', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `eshaun`
+--
+
+CREATE TABLE `eshaun` (
+  `genre` text,
+  `counter` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `eshaun`
+--
+
+INSERT INTO `eshaun` (`genre`, `counter`) VALUES
+('RPG', 0),
+('Racing', 1),
+('Strategy', 0),
+('Action', 0),
+('Puzzle', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `eshaun3`
+--
+
+CREATE TABLE `eshaun3` (
+  `genre` text,
+  `counter` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `eshaun3`
+--
+
+INSERT INTO `eshaun3` (`genre`, `counter`) VALUES
+('RPG', 0),
+('Racing', 0),
+('Strategy', 0),
+('Action', 0),
+('Puzzle', 0);
 
 -- --------------------------------------------------------
 
@@ -130,7 +263,7 @@ CREATE TABLE `game_bank` (
 
 INSERT INTO `game_bank` (`G_id`, `G_name`, `G_genre`, `desc_ids`, `tags`, `game_info`, `Rating`, `Editors_choice`, `total_rating`, `counter`) VALUES
 (2, 'Dark souls III:The Fire Fades Edition', 'RPG', ',34', 'Action,RPG,Open world', '', 4, '', 50, 14),
-(5, 'The crew', 'Racing', '', 'Racing,Action', 'The Crew is a revolutionary action car and driving game on Xbox One, Playstation 4, and PC. You will never drive alone in this open world with licensed cars', 0, '', 0, 0),
+(5, 'The crew', 'Racing', '', 'Racing,Action', 'The Crew is a revolutionary action car and driving game on Xbox One, Playstation 4, and PC. You will never drive alone in this open world with licensed cars', 5, '', 5, 1),
 (6, 'Assassin''s Creed Origins', 'RPG', '', 'RPG,Action', 'Assassin''s Creed Origins is an action-adventure video game developed by Ubisoft Montreal and published by Ubisoft. It is the tenth major installment in the Assassin''s Creed series and the successor to 2015''s Assassin''s Creed Syndicate.', 0, '', 0, 0);
 
 -- --------------------------------------------------------
@@ -143,6 +276,28 @@ CREATE TABLE `hello` (
   `genre` text,
   `counter` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `sdfsdfsdf`
+--
+
+CREATE TABLE `sdfsdfsdf` (
+  `genre` text,
+  `counter` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `sdfsdfsdf`
+--
+
+INSERT INTO `sdfsdfsdf` (`genre`, `counter`) VALUES
+('RPG', 0),
+('Racing', 0),
+('Strategy', 0),
+('Action', 0),
+('Puzzle', 0);
 
 -- --------------------------------------------------------
 
@@ -175,10 +330,17 @@ CREATE TABLE `user_info` (
 --
 
 INSERT INTO `user_info` (`U_id`, `U_name`, `U_pass`, `U_email`) VALUES
-(1, 'tyul', '123456', 'tyul@gmail.com'),
-(4, 'eshaun', '0cf3e5e45add388221bb1b5f4830b8cd', 'eshaun@gmail.com'),
+(4, 'eshaun', '0cf3e5e45add388221bb1b5f4830b8cd', 'ert@gmail.com'),
 (5, 'hello', '0cf3e5e45add388221bb1b5f4830b8cd', 'hello@gmail.com'),
-(6, 'adam', '0cf3e5e45add388221bb1b5f4830b8cd', 'adam@gmail.com');
+(6, 'adam', '0cf3e5e45add388221bb1b5f4830b8cd', 'adam@gmail.com'),
+(7, 'Aurko', '42b672ac710fdcaacaf9297ad1f5ea50', 'aurko420@gmail.com'),
+(8, 'asdasd', 'a8f5f167f44f4964e6c998dee827110c', 'asdasd@fgh'),
+(9, 'ddd', 'fa916429b37ff465c565e6e649a98e91', 'dd@f'),
+(10, 'erty', '0cf3e5e45add388221bb1b5f4830b8cd', 'dfg@ghy'),
+(11, 'sdfsdfsdf', '0cf3e5e45add388221bb1b5f4830b8cd', 'dfdfdf@sd.com'),
+(14, 'eshaun', '0cf3e5e45add388221bb1b5f4830b8cd', 'ert@gmail.com'),
+(15, 'eshaun3', '0cf3e5e45add388221bb1b5f4830b8cd', 'isaha367@gmail.com'),
+(16, 'sad', '0cf3e5e45add388221bb1b5f4830b8cd', 'isaha367@gmail.com');
 
 --
 -- Indexes for dumped tables
@@ -218,17 +380,17 @@ ALTER TABLE `user_info`
 -- AUTO_INCREMENT for table `descriptions`
 --
 ALTER TABLE `descriptions`
-  MODIFY `desc_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
+  MODIFY `desc_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
 --
 -- AUTO_INCREMENT for table `game_bank`
 --
 ALTER TABLE `game_bank`
-  MODIFY `G_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `G_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT for table `user_info`
 --
 ALTER TABLE `user_info`
-  MODIFY `U_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `U_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
